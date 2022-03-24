@@ -47,7 +47,6 @@ function addCounter(table, idx, name, data){
   inp.setAttribute("type", "text");
   inp.setAttribute("name", data.code);
   inp.setAttribute("style", "background-color: black; color: white;border: none; text-align: center;");
-  inp.setAttribute("disabled", "");
   inp.setAttribute("value", 0);
   inp.setAttribute("size", 2);
   inp.setAttribute("maxLength", 2);
@@ -163,9 +162,6 @@ function addText(table, idx, name, data) {
   if (data.hasOwnProperty('required')) {
     inp.setAttribute("required", "");
   }
-  if (data.hasOwnProperty('disabled')) {
-    inp.setAttribute("disabled", "");
-  }
   cell2.appendChild(inp);
 
   if (data.hasOwnProperty('defaultValue')) {
@@ -207,9 +203,6 @@ function addNumber(table, idx, name, data) {
   }
   if (data.hasOwnProperty('defaultValue')) {
     inp.setAttribute("value", data.defaultValue);
-  }
-  if (data.hasOwnProperty('disabled')) {
-    inp.setAttribute("disabled", "");
   }
   if (data.hasOwnProperty('required')) {
     inp.setAttribute("required", "");
